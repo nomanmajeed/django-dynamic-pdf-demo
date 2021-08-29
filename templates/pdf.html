@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF</title>
+  </head>
+  <body>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Father Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in student_objs %}
+          <tr>
+            <th>{{forloop.counter}}</th>
+            <th>{{student.name}}</th>
+            <th>{{student.age}}</th>
+            <th>{{student.father_name}}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
